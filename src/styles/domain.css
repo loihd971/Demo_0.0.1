@@ -1,0 +1,94 @@
+.domain-register__container {
+  min-width: 500px;
+  max-width: 600px;
+}
+
+.domain-register__header {
+  min-width: 500px;
+  text-align: left;
+}
+.domain-register__body {
+  min-width: 500px;
+  text-align: left;
+}
+.domain-default .domain-info {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+}
+
+.domain-customize .domain-info {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+}
+
+.domain-customize .domain-table {
+  /* text-align: right; */
+}
+
+.domain-status {
+  background-color: var(--green-color);
+  width: fit-content;
+  height: fit-content;
+  border-radius: 20px;
+  padding: 1px 10px;
+  color: var(--white-color);
+}
+
+.domain-status--isConnecting {
+  background-color: var(--dark-yellow-color);
+}
+
+.domain-link {
+  cursor: pointer;
+}
+
+.domain-form {
+  text-align: right;
+  width: 100%;
+}
+
+.domain-warning {
+  margin-bottom: 20px;
+  padding: 10px;
+
+  border-radius: 10px;
+  border: 1px solid var(--yellow-color);
+  background-color: var(--light-yellow-color);
+}
+
+.domain-warning--2column {
+  display: grid;
+  grid-template-columns: 1fr 14fr;
+}
+.domain-warning .warning-icon {
+}
+
+.warning-content__ul {
+  padding-left: 30px;
+}
+
+/* count down component */
+.count-down__container {
+  width: fit-content;
+  padding: 8px 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  background: var(--light-black-color);
+}
+
+.count-down__time {
+  color: var(--white-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.more-option__icon {
+  box-sizing: border-box;
+  color: var(--black-color);
+  min-width: unset !important;
+}
+.more-option__icon:focus {
+  min-width: unset;
+  border: 2px solid var(--blue-color);
+}
