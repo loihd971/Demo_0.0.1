@@ -5,10 +5,10 @@ import { TextField, Button, InputAdornment } from "@mui/material";
 import { setLocalStorage } from "../utils/storage";
 
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
+
 interface FormProps {
-  stage: number;
   initialValue: { domain: string };
-  onSubmit: () => void;
+  onSubmit: any;
 }
 
 function DomainForm({ initialValue, onSubmit }: Partial<FormProps>) {
@@ -28,7 +28,7 @@ function DomainForm({ initialValue, onSubmit }: Partial<FormProps>) {
 
   return (
     <Formik
-      initialValues={initialValue}
+      initialValues={initialValue as any}
       validate={validateForm}
       onSubmit={onSubmit}
     >
@@ -38,7 +38,6 @@ function DomainForm({ initialValue, onSubmit }: Partial<FormProps>) {
           onSubmit={(e) => {
             e.preventDefault();
             onSubmit();
-            console.log("test");
           }}
         >
           <Field

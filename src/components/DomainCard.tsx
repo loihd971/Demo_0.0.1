@@ -154,7 +154,6 @@ function DomainCard({ type }: Partial<DomainCardProps>) {
           ))}
         {type !== 0 && stage === 0 && (
           <DomainForm
-            stage={stage}
             initialValue={{ domain: "" }}
             onSubmit={handleSubmitForm}
           />
