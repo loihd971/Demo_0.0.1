@@ -60,3 +60,8 @@
 - yarn build| npm run build : build project into bundle file to deploy
 
 ## Deploy
+
+-Vercel: [`https://demo-domain-register.vercel.app`](https://demo-domain-register.vercel.app)
+-Netlify: No
+-Heroku: No
+
