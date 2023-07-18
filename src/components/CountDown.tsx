@@ -7,7 +7,7 @@ interface CountDownProps {
   onClose: () => void;
 }
 function CountDown({ onClose }: CountDownProps) {
-  const initialTime = 0.1 * 60;
+  const initialTime = 10 * 60;
   const [timeRemaining, setTimeRemaining] = useState(
     getLocalStorage("countdownTime") || initialTime
   );
