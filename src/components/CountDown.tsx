@@ -1,21 +1,26 @@
 import { Typography } from "@mui/material";
 import HourglassEmptyIcon from "@mui/icons-material/HourglassEmpty";
 import { useEffect, useState } from "react";
+import { getLocalStorage, setLocalStorage } from "../utils/storage";
 
 interface CountDownProps {
   onClose: () => void;
 }
 function CountDown({ onClose }: CountDownProps) {
-  const initialTime = 10 * 60;
-  const [timeRemaining, setTimeRemaining] = useState(initialTime);
+  const initialTime = 0.1 * 60;
+  const [timeRemaining, setTimeRemaining] = useState(
+    getLocalStorage("countdownTime") || initialTime
+  );
 
   useEffect(() => {
     if (timeRemaining === 0) {
+      setLocalStorage("countdownTime", 0);
       onClose();
       return;
     }
     const interval = setInterval(() => {
       setTimeRemaining((prevTime) => prevTime - 1);
+      setLocalStorage("countdownTime", timeRemaining);
     }, 1000);
 
     return () => {
