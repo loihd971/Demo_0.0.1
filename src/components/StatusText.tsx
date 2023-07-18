@@ -1,5 +1,3 @@
-import React from "react";
-
 interface StatusProps {
   // 1: ok | 0: is connecting
   status: number;

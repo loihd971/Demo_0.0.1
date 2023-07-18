@@ -49,7 +49,7 @@
 
 - Because project requirement no need to techstack like: scss, redux, redux-saga or more common use libs/packages so i just install tech stack above, thanks.
 
-## Github
+## Github ( checkout to master branch)
 
 [`evanloi/demo-domain-register-0.0.1`](https://github.com/loihd971/Demo_0.0.1)
 
@@ -58,3 +58,5 @@
 - yarn|npm i| pnpm install : install packages
 - yarn dev|npm run dev : launch project
 - yarn build| npm run build : build project into bundle file to deploy
+
+## Deploy

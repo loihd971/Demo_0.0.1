@@ -1,6 +1,5 @@
-import { Box, Button, Hidden, Link, Typography } from "@mui/material";
+import { Box, Button, Link, Typography } from "@mui/material";
 import {
-  Paper,
   TableContainer,
   Table,
   TableHead,
@@ -11,7 +10,7 @@ import {
 import CopyAllIcon from "@mui/icons-material/CopyAll";
 import WarningIcon from "@mui/icons-material/Warning";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import CountDown from "./CountDown";
 import StatusText from "./StatusText";
 import { getLocalStorage, setLocalStorage } from "../utils/storage";

@@ -1,6 +1,6 @@
 import { Typography } from "@mui/material";
 import HourglassEmptyIcon from "@mui/icons-material/HourglassEmpty";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 interface CountDownProps {
   onClose: () => void;

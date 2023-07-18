@@ -1,5 +1,4 @@
-import React from "react";
-import { Formik, Form, Field } from "formik";
+import { Formik, Field } from "formik";
 import ErrorIcon from "@mui/icons-material/Error";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import { TextField, Button, InputAdornment } from "@mui/material";
@@ -12,7 +11,7 @@ interface FormProps {
   onSubmit: () => void;
 }
 
-function DomainForm({ initialValue, stage, onSubmit }: FormProps) {
+function DomainForm({ initialValue, onSubmit }: Partial<FormProps>) {
   const validateForm = (values: { domain: string }) => {
     const validDomainRegex = /^[a-zA-Z0-9]+([-.][a-zA-Z0-9]+)*\.[a-zA-Z]{2,}$/g;
     const errors = { domain: "" };
@@ -33,15 +32,7 @@ function DomainForm({ initialValue, stage, onSubmit }: FormProps) {
       validate={validateForm}
       onSubmit={onSubmit}
     >
-      {({
-        errors,
-        touched,
-        handleBlur,
-        values,
-        submitForm,
-        handleChange,
-        handleSubmit,
-      }) => (
+      {({ errors, touched, handleBlur, values, handleChange }) => (
         <form
           className="domain-form"
           onSubmit={(e) => {
