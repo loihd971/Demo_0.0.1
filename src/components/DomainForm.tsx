@@ -7,7 +7,7 @@ import { setLocalStorage } from "../utils/storage";
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 
 interface FormProps {
-  initialValue: { domain: string };
+  initialValue: any;
   onSubmit: any;
 }
 
@@ -28,7 +28,7 @@ function DomainForm({ initialValue, onSubmit }: Partial<FormProps>) {
 
   return (
     <Formik
-      initialValues={initialValue as any}
+      initialValues={initialValue}
       validate={validateForm}
       onSubmit={onSubmit}
     >
